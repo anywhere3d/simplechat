@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Chat Users</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect('http://localhost', {'sync disconnect on unload': true });
+      socket.emit('getUsers');
+
+      socket.on('sendAllUserList', function (data) {
+        var userList = data;
+        document.getElementById('userList').innerHTML = userList + '<br>';
+      });
+
+      socket.on('sendRoomList', function (data) {
+        var roomList = data;
+        document.getElementById('roomList').innerHTML = roomList + '<br>';
+      });
+
+    </script>
+  </head>
+  <body>
+    <h2>Status</h2>
+    <h3>Users</h3>
+    <div id="userList"></div>
+    <h3>Rooms</h3>
+    <div id="roomList"></div>
+  </body>
+</html>
