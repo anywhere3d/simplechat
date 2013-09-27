@@ -1,0 +1,28 @@
+{
+  "name": "simplechat",
+  "version": "0.0.1",
+  "description": "A very simple chat server.",
+  "main": "server.js",
+  "dependencies": {
+    "socket.io": "~0.9.16",
+    "express": "~3.4.0",
+    "validator": "~1.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dirkk0/simplechat.git"
+  },
+  "keywords": [
+    "socket.io"
+  ],
+  "author": "Dirk Krause",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dirkk0/simplechat/issues"
+  }
+}
